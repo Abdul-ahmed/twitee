@@ -34,7 +34,8 @@
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
             <a href="#">Forget Password</a>
-            <button>Sign In</button>
+            <router-link to="/home" class="button">Sign In</router-link>
+            <!-- <button>Sign In</button> -->
         </form>
     </div>
 </article>
@@ -141,6 +142,27 @@ button {
         outline: none;
     }
 }
+
+.button {
+    border-radius: 20px;
+    border: 1px solid #1A8CD8;
+    background-color: #1A8CD5;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+    &:active {
+        transform: scale(.9);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
 button.invert {
     background-color: transparent;
     border-color: #fff;
