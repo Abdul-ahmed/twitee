@@ -1,5 +1,5 @@
 <template>
-<article>
+<article id="ss">
     <div class="container" :class="{'sign-up-active' : signUp}">
         <div class="overlay-container">
             <div class="overlay">
@@ -142,7 +142,6 @@ button {
         outline: none;
     }
 }
-
 .button {
     border-radius: 20px;
     border: 1px solid #1A8CD8;
@@ -162,7 +161,6 @@ button {
         outline: none;
     }
 }
-
 button.invert {
     background-color: transparent;
     border-color: #fff;

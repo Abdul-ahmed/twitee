@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <SignupSignin />
-  </div>
+<SignupSignin />
 </template>
 
 <script>
@@ -9,10 +7,10 @@
 import SignupSignin from '@/components/SignupSignin.vue'
 
 export default {
-  name: 'Home',
-  components: {
-    SignupSignin
-  }
+    name: 'Home',
+    components: {
+        SignupSignin
+    }
 }
 </script>
 
@@ -21,7 +19,8 @@ body {
     margin: 0;
     padding: 0;
 }
-#app {
+
+#ss {
     font-family: tahoma;
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
@@ -32,6 +31,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 </style>
