@@ -13,4 +13,4 @@ Is the page that check if a user already have an account in the system, which th
 ### Twitter Clone Homepage
 This is the newsfeed page where all authenticated and authorized users can can post anything that crosses their mind, in texts or images and also view all other users post too.
 
-##### Note: The UI of this system called twitee is completely built with Vue.js 3
+##### Note: The Twitter UI clone of this system called twitee is completely built with Vue.js 3
