@@ -40,6 +40,7 @@
     </div>
     <!-- SIDEBAR - End -->
 
+    <!-- NEWSFEED - Start -->
     <div class="feed">
         <div class="feedHeader">
             <h2>Home</h2>
@@ -69,9 +70,71 @@
         </div>
 
         <div class="post">
+            <div class="postAvatar">
+                <img src="../assets/avatar.png" alt="">
+            </div>
+            <div class="postBody">
+                <div class="postHeader">
+                    <h3>Abdulahmed Abdulhakeem
+                        <span class="postHeaderSpecial">
+                            <img src="../assets/verify.png" alt="">@Lovelogist
+                        </span>
+                        <fa :icon="['fas', 'ellipsis-h']" class="sidebarIcon" size="sm" :style="{ color: '#4A4E52' }" pull="right" />
+                    </h3>
+                </div>
+                <div class="postBodyDesc">
+                    <p>My Frist Dream Car</p>
+                    <img src="../assets/bugatti.jpg" alt="">
+                </div>
+                <div class="postFooter">
+                    <fa :icon="['far', 'comment']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                    <fa :icon="['fas', 'retweet']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                    <fa :icon="['far', 'heart']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                    <fa :icon="['fas', 'external-link-alt']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="postAvatar">
+                <img src="../assets/avatar.png" alt="">
+            </div>
+            <div class="postBody">
+                <div class="postHeader">
+                    <h3>Abdulahmed Abdulhakeem
+                        <span class="postHeaderSpecial">
+                            <img src="../assets/verify.png" alt="">@Lovelogist
+                        </span>
+                        <fa :icon="['fas', 'ellipsis-h']" class="sidebarIcon" size="sm" :style="{ color: '#4A4E52' }" pull="right" />
+                    </h3>
+                </div>
+                <div class="postBodyDesc">
+                    <p>My Second Dream Car</p>
+                    <img src="../assets/bugatti.jpg" alt="">
+                </div>
+                <div class="postFooter">
+                    <fa :icon="['far', 'comment']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                    <fa :icon="['fas', 'retweet']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                    <fa :icon="['far', 'heart']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                    <fa :icon="['fas', 'external-link-alt']" class="" size="lg" :style="{ color: '#4A4E52' }" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NEWSFEED - End -->
+
+    <!-- WIDGET - Start -->
+    <div class="widget">
+        <div class="widgetInput">
+            <fa :icon="['fas', 'search']" class="widgetIcon" size="md" :style="{ color: '#4A4E52' }" />
+            <input type="text" placeholder="Search Twitee" />
+        </div>
+
+        <div class="widgetContainer">
+            <!-- <h3>What's happening</h3> -->
 
         </div>
     </div>
+    <!-- WIDGET - End -->
 </body>
 </template>
 
@@ -123,7 +186,6 @@ body {
                 font-size: 20px;
                 margin-left: 20px;
                 font-family: 'Trebuchet MS', sans-serif;
-
             }
         }
 
@@ -150,6 +212,10 @@ body {
             text-decoration: none;
             font-family: 'Trebuchet MS', sans-serif;
         }
+
+        .button:hover {
+            background-color: #1A8CD8;
+        }
     }
 
     .feed {
@@ -165,6 +231,7 @@ body {
             top: 0;
             z-index: 100;
             padding: 15px 20px;
+            background-color: rgba(255, 255, 255, 0.863);
 
             h2 {
                 font-family: 'Trebuchet MS', sans-serif;
@@ -207,11 +274,13 @@ body {
                 }
 
                 .tweetboxFile {
-                    margin-left: 20px;
+                    margin-left: 80px;
+                    margin-right: 30px;
 
                     img {
                         margin-right: 10px;
                     }
+
                     .tweetbutton {
                         background-color: #1D9BF0;
                         border: none;
@@ -222,9 +291,83 @@ body {
                         width: 100px;
                         font-family: 'Trebuchet MS', sans-serif;
                         float: right;
+                        cursor: pointer;
+                    }
+
+                    .tweetbutton:hover {
+                        background-color: #1A8CD8;
+
                     }
                 }
 
+            }
+        }
+
+        .post {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid #EFF3F4;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+            .postAvatar {
+                img {
+                    border-radius: 50%;
+                    height: 40px;
+                }
+            }
+
+            .postBody {
+                flex: 1;
+                padding: 10px;
+
+                .postHeader {
+                    h3 {
+                        font-size: 17px;
+                        margin-bottom: 5px;
+                        font-family: 'Trebuchet MS', sans-serif;
+
+                        .postHeaderSpecial {
+                            font-weight: 600;
+                            font-size: 15px;
+                            color: gray;
+                            font-family: 'Trebuchet MS', sans-serif;
+
+                            img {
+                                margin-right: 5px;
+                                width: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .postBodyDesc {
+                    font-size: 15px;
+                    width: 550px;
+
+                    p {
+                        padding-bottom: 10px;
+                        font-family: 'Trebuchet MS', sans-serif;
+
+                    }
+
+                    img {
+                        object-fit: contain;
+                        border-radius: 20px;
+                        width: 100%;
+
+                    }
+
+                }
+
+                .postFooter {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    margin-right: 40px;
+                }
             }
         }
     }
@@ -240,6 +383,50 @@ body {
 
     .feed::-webkit-scrollbar {
         display: none;
+    }
+
+    .widget {
+        .widgetInput {
+            display: flex;
+            align-items: center;
+            background-color: #EFF3F4;
+            padding: 10px;
+            border-radius: 30px;
+            margin-top: 5px;
+            margin-left: 30px;
+            padding: 11px 20px;
+
+            .widgetIcon {
+                color: #EFF3F4;
+                margin-right: 15px;
+
+            }
+
+            input {
+                border: none;
+                background-color: #EFF3F4;
+                outline: none;
+                font-size: 15px;
+                font-family: 'Trebuchet MS', sans-serif;
+                width: 250px;
+            }
+        }
+
+        .widgetContainer {
+            display: flex;
+            align-items: center;
+            background-color: #EFF3F4;
+            padding: 10px;
+            border-radius: 30px;
+            margin-top: 15px;
+            margin-left: 30px;
+            padding: 11px 20px;
+            height: 500px;
+
+            h3 {
+                font-family: 'Trebuchet MS', sans-serif;
+            }
+        }
     }
 }
 </style>
