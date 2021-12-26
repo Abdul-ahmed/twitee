@@ -109,7 +109,7 @@
                 </div>
                 <div class="postBodyDesc">
                     <p>My Second Dream Car</p>
-                    <img src="../assets/bugatti.jpg" alt="">
+                    <img src="../assets/bugatti2.jpg" alt="">
                 </div>
                 <div class="postFooter">
                     <fa :icon="['far', 'comment']" class="" size="lg" :style="{ color: '#4A4E52' }" />
